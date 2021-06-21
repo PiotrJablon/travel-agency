@@ -42,7 +42,10 @@ export default function reducer(statePart = [], action = {}) {
     case DURATION_FILTER:
       return {
         ...statePart,
-        duration: action.payload,
+        duration: {
+          ...statePart.duration,
+          [action.payload.type]: action.payload.value,
+        },
       };
     default:
       return statePart;
