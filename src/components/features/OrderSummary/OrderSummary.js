@@ -8,12 +8,12 @@ import styles from './OrderSummary.scss';
 
 const OrderSummary = props => (
   <h2 className={styles.component}>
-    Total:<strong>{formatPrice(calculateTotal(props.tripCost.tripCost, props.tripCost.options))}</strong>
+    Total:<strong>{formatPrice(calculateTotal(props.tripCost, props.options))}</strong>
   </h2>
 );
 
 OrderSummary.propTypes = {
-  tripCost: PropTypes.object,
+  tripCost: PropTypes.string,
   options: PropTypes.object,
 };
 
