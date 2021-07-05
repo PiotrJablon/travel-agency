@@ -8,7 +8,7 @@ import styles from './OrderSummary.scss';
 
 const OrderSummary = props => (
   <h2 className={styles.component}>
-    Total:<strong>{formatPrice(calculateTotal(props.tripCost, props.options))}</strong>
+    Price from:<strong>{formatPrice(calculateTotal(props.tripCost, props.options))}</strong>
   </h2>
 );
 
